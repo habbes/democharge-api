@@ -1,0 +1,58 @@
+{
+  "name": "Deal",
+  "plural": "deals",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "originalPrice": {
+      "type": "number",
+      "required": true
+    },
+    "discountPrice": {
+      "type": "number",
+      "required": true
+    },
+    "image": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "merchant": {
+      "type": "belongsTo",
+      "model": "Merchant",
+      "foreignKey": ""
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "Review",
+      "foreignKey": ""
+    },
+    "users": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "",
+      "through": "DealUser"
+    },
+    "dealUsers": {
+      "type": "hasMany",
+      "model": "DealUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

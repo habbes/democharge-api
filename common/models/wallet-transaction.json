@@ -1,0 +1,33 @@
+{
+  "name": "WalletTransaction",
+  "plural": "walletTransactions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "details": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "validations": [],
+  "relations": {
+    "wallet": {
+      "type": "belongsTo",
+      "model": "Wallet",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

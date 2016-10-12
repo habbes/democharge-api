@@ -1,0 +1,38 @@
+{
+  "name": "DealUser",
+  "plural": "dealUsers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "redeemed": {
+      "type": "boolean",
+      "default": false
+    },
+    "redeemedAt": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "deal": {
+      "type": "belongsTo",
+      "model": "Deal",
+      "foreignKey": ""
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
+    },
+    "transaction": {
+      "type": "belongsTo",
+      "model": "WalletTransaction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

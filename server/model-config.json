@@ -31,5 +31,33 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "user": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Merchant": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Deal": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Review": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Wallet": {
+    "dataSource": "db",
+    "public": true
+  },
+  "DealUser": {
+    "dataSource": "db",
+    "public": true
+  },
+  "WalletTransaction": {
+    "dataSource": "db",
+    "public": true
   }
 }

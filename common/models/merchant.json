@@ -1,0 +1,42 @@
+{
+  "name": "Merchant",
+  "plural": "merchants",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "geopoint"
+    },
+    "locationName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "website": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "deals": {
+      "type": "hasMany",
+      "model": "Deal",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
