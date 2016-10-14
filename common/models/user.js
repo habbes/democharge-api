@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(User) {
 
     /**
@@ -6,7 +8,7 @@ module.exports = function(User) {
      * @added 13.10.2016
      * @version 1
      */
-    User.observe('before save', (context, next) => {
+    User.observe('after save', (context, next) => {
         if(!context.isNewInstance){
             return next();
         }
