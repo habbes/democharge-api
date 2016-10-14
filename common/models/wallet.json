@@ -16,8 +16,7 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "user",
-      "foreignKey": ""
+      "model": "user"
     },
     "transactions": {
       "type": "hasMany",
